@@ -1,0 +1,186 @@
+.gallery {
+  display: flex;
+  min-width: 240px;
+  min-height: 572px;
+  gap: 32px;
+  justify-content: start;
+  width: 780px;
+}
+
+.productImage {
+  aspect-ratio: 1.36;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 12px;
+  min-width: 240px;
+  flex: 1;
+  flex-basis: 0%;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+.productImage:hover {
+  transform: scale(1.05);
+}
+
+.productImage:focus {
+  outline: 3px solid #393;
+  outline-offset: 2px;
+}
+
+@media (max-width: 991px) {
+  .gallery {
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .productImage {
+    max-width: 100%;
+    min-width: 200px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .productImage {
+    transition: none;
+  }
+}
+
+@media (hover: none) {
+  .productImage:hover {
+    transform: none;
+  }
+}
+
+.galleryWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.thumbnailContainer {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #393 transparent;
+}
+
+.thumbnailContainer::-webkit-scrollbar {
+  height: 6px;
+}
+
+.thumbnailContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.thumbnailContainer::-webkit-scrollbar-thumb {
+  background-color: #393;
+  border-radius: 3px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.thumbnail:hover,
+.thumbnail:focus {
+  opacity: 1;
+}
+
+.thumbnail.active {
+  opacity: 1;
+  border: 2px solid #393;
+}
+
+.zoomContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.zoomedImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #393;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+}
+
+.closeButton:hover,
+.closeButton:focus {
+  background: #2a2;
+  outline: none;
+}
+
+.navigationButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #393;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+}
+
+.prevButton {
+  left: 20px;
+}
+
+.nextButton {
+  right: 20px;
+}
+
+.navigationButton:hover,
+.navigationButton:focus {
+  background: #2a2;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .navigationButton {
+    width: 32px;
+    height: 32px;
+  }
+
+  .closeButton {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+  }
+}

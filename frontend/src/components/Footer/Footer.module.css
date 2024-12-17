@@ -1,0 +1,91 @@
+.footer {
+  width: 100%;
+  padding: 0 40px 80px;
+  margin-top: 10px;
+}
+
+@media (max-width: 991px) {
+  .footer {
+    padding: 0 20px;
+  }
+}
+
+.contactTitle {
+  font-size: 64px;
+  font-weight: 700;
+  color: #282828;
+}
+
+@media (max-width: 991px) {
+  .contactTitle {
+    font-size: 40px;
+  }
+}
+
+.contactSection {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactBlock {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.contactItem {
+  border-radius: 12px;
+  background-color: #f1f3f4;
+  flex: 1;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 991px) {
+  .contactItem {
+    padding: 0 20px;
+  }
+}
+
+.contactLabel {
+  font-size: 20px;
+  font-weight: 500;
+  color: #8b8b8b;
+}
+
+.contactValue {
+  margin-top: 16px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #282828;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 16px;
+}
+
+.socialIcon {
+  aspect-ratio: 1;
+  width: 43px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.footerImage {
+  aspect-ratio: 3.89;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 32px;
+}
+
+@media (max-width: 991px) {
+  .footerImage {
+    width: 100%;
+  }
+}

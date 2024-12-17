@@ -1,0 +1,81 @@
+.productCard {
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    position: relative;
+    min-width: 240px;
+    flex: 1;
+    max-width: 316px;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.productImage {
+    aspect-ratio: 1.11;
+    object-fit: contain;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.productContent {
+    padding: 20px 32px 0 32px;
+}
+
+.productTitle {
+    color: #282828;
+    font: 500 20px/1.3 Montserrat, sans-serif;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.priceContainer {
+    display: flex;
+    margin-top: 16px;
+    gap: 16px;
+}
+
+.currentPrice {
+    color: #282828;
+    font: 600 40px/1.1 Montserrat, sans-serif;
+}
+
+.salePrice {
+    color: #8b8b8b;
+    font: 500 20px/1.3 Montserrat, sans-serif;
+    text-decoration: line-through;
+}
+
+.saleTag {
+    border-radius: 6px;
+    background: #393;
+    color: #fff;
+    font: 600 20px/1.3 Montserrat, sans-serif;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    padding: 4px 8px;
+}
+
+.addToCartButton {
+    border-radius: 6px;
+    background: #393;
+    color: #fff;
+    font: 600 20px/1.3 Montserrat, sans-serif;
+    position: absolute;
+    width: calc(100% - 28px);
+    right: 14px;
+    bottom: 166px;
+    padding: 16px 32px;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .productContent {
+        padding: 20px;
+    }
+
+    .addToCartButton {
+        padding: 16px 20px;
+    }
+}
